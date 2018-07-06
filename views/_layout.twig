@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:locale:alternate" content="en_US"/>
+    <meta property="og:title" content="Whats that"/>
+    <meta property="og:url" content="url"/>
+    <meta property="og:type" content="type"/>
+    <meta property="og:image" content="image_url"/>
+    <meta property="og:image:secure_url" content="img"/>
+    <meta property="og:description" content="Website where you can add definiton"/>
+    <meta name="description" content="Description"/>
+    <meta name="keywords" content="keyword"/>
+
+    <!-- LINK -->
+    <link rel="icon" type="image/png" href="assets/img/fav-icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico%7CRoboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/app.css">
+
+    <title>
+        {% if title is defined %}
+            Whats that - {{ title }}
+        {% endif %}
+    </title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header background is-secondary">
+   <p>HEADER</p>
+</header>
+
+<!-- CONTENT -->
+{% block content %}{% endblock %}
+
+<!-- FOOTER -->
+<footer class="full-w background is-tertiary">
+    <p>footer</p>
+</footer>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "name",
+        "url": "siteurl",
+        "logo": "/assets/img/logo.svg"
+    }
+</script>
+
+<script src="assets/js/components.min.js"></script>
+<script src="assets/js/templates.min.js"></script>
+
+{% block customScript %}
+
+{% endblock %}
+
+</body>
+</html>
